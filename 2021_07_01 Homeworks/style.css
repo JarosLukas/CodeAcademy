@@ -1,0 +1,24 @@
+
+.container {
+    margin: 10px;
+    margin-left: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(232, 236, 232); 
+  }
+.monkeys {
+    width: 250px;
+    height: 200px;
+    background: url("0DElr0H.jpg") no-repeat;
+    display: inline-block;
+}
+.monkeys:hover {
+    background: url("PLDVxza.jpg") no-repeat;
+}
+.text-end {
+    border: 0.5px solid rgb(181, 184, 181);
+}
+.btn-group, .form-control {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
