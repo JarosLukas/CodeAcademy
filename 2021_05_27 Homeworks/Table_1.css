@@ -1,0 +1,17 @@
+    Table{
+        border-collapse: collapse;
+    }
+    .top{
+        background-color: darkred;
+        color: white;
+    }
+    .first{
+        background-color: darkkhaki;
+    }
+    .second{
+        background-color: #dbdb88;
+    }
+    th, td{
+        padding:9px;
+
+    }

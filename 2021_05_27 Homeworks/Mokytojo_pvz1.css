@@ -1,0 +1,30 @@
+.table-lux {
+    width: 300px;
+    border: 1px solid #a52a2a;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-lux th {
+    background: #a52a2a;
+    color: white;
+}
+
+.table-lux td {
+    border-bottom: 1px solid black;
+}
+
+.table-lux td, .table-lux th {
+    padding: 4px;
+}
+
+/* odd rgb(255, 243, 187);*/
+/* even rgb(255, 243, 216)*/
+
+tr:nth-child(odd) {
+    background-color: rgb(255, 243, 187);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(255, 243, 216);
+}
