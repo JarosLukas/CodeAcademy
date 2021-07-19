@@ -17,21 +17,21 @@ var_dump(substr($str, -3));
 function negative($number)
 {
 	return $number * -1;
-}
+};
 var_dump(negative(3));
 
 // Sukurkite funkciją kauliukas, kuri imituotų kauliuko metimą. (Į ekraną atspaudintų atsitiktinį skaičių nuo 1 iki 6); Užuomina: rand();
 
 function dice() {
 	return rand(1, 6);
-}
+};
 var_dump(dice());
 
 // Parašykite funkciją pusePloto, kuri priimtų 2 argumentus ir išvestų į ekraną pusę abiejų skaičių sandaugą.
 	
 function halfArea($lenght,$width) {
 	return($lenght * $width) / 2;
-}
+};
 var_dump(halfArea(55,111));
 
 // Sukurkite funkciją 'arEsiDarJaunas', kuri priimtų vieną argumentą amžius ir į ekraną išvestų pranešimą, kiek metų trūksta iki 100. (Pvž.: "Iki šimto jūms trūksta 70 metų! Dar gyventi liko daug!")
@@ -39,7 +39,7 @@ var_dump(halfArea(55,111));
 function areYouStillYoung($age) {
 	$diff = 100 - $age;
 	return 'Iki šimto metų jums trūksta '.$diff.' metų! Dar gyventi liko daug!';
-}
+};
 var_dump(areYouStillYoung(34));
 
 // Sukurkite funkciją, kuri priimtų argumentą farenheitas ir laipsnius iš farenheito konvertuotų į celsijų.
@@ -48,5 +48,5 @@ function fahrenheit_to_celsius($fahrenheit)
 {
 	$celsius = 5/9 * ($fahrenheit-32);
 	return $celsius;
-}
+};
 var_dump(fahrenheit_to_celsius(97.88));
