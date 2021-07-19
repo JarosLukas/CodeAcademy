@@ -22,8 +22,10 @@ var_dump(negative(3));
 
 // Sukurkite funkciją kauliukas, kuri imituotų kauliuko metimą. (Į ekraną atspaudintų atsitiktinį skaičių nuo 1 iki 6); Užuomina: rand();
 
-$dice = rand(1,6);
-var_dump($dice);
+function dice() {
+	return rand(1, 6);
+}
+var_dump(dice());
 
 // Parašykite funkciją pusePloto, kuri priimtų 2 argumentus ir išvestų į ekraną pusę abiejų skaičių sandaugą.
 	
