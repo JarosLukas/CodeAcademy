@@ -16,14 +16,14 @@ var_dump(implode(customShuffle($arr)));
 $user = [
     'name'    => 'Jaroslav',
     'surname' => 'Lukasevic',
-    'age'     => '74',
-    'mail'
+    'age'     => '64',
+    'mail'    => 'jaroslav.lukasevic@gmail.com'
 ];
 
 // Sukurkite funkciją yraPilnametis, kuri priimtų vieną parametrą - $vartotojas(masyvas iš praeitos užduoties) ir GRAŽINTU tekstą su statusu: nepilnametis, pilnametis, pensininkas.
 
 function validateAge($user) {
-    if ($user['age'] > '18' && $user['age'] < '65') {
+    if ($user['age'] >= '18' && $user['age'] < '65') {
 		return sprintf($user['name']. ' yra pilnametis');
 	} else if ($user['age'] < '18') {
 		return sprintf($user['name']. ' yra nepilnametis');
