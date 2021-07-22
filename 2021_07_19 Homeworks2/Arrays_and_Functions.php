@@ -109,7 +109,7 @@ $book = [
 
 // Sukurti masyvą, kurio elementai būtų masyvai aprašantys knygas
 
-$book = [
+$books = [
     'title' => [
         'Around the World',
         'Protėvių šauksmas',
@@ -133,14 +133,14 @@ $book = [
 ];
 
 // Išvesti visus knygų masyvo elementus su var_dump;
-var_dump($book);
+var_dump($books);
 
 // Išvesti visus knygų masyvo elementus lentele;
 // https://stackoverflow.com/questions/4746079/how-to-create-a-html-table-from-a-php-array
-function array2Html($book, $table = true)
+function array2Html($books, $table = true)
 {
     $out = '';
-    foreach ($book as $key => $value) {
+    foreach ($books as $key => $value) {
         if (is_array($value)) {
             if (!isset($tableHeader)) {
                 $tableHeader =
@@ -163,10 +163,10 @@ function array2Html($book, $table = true)
         return $out;
     }
 }
-var_dump(array2Html($book));
+var_dump(array2Html($books));
 
 // Išvesti visų visų knygų metų vidurkį;
-$average = array_sum($book['year'])/count($book['year']);
+$average = array_sum($books['year'])/count($books['year']);
 
 var_dump($average);
 
