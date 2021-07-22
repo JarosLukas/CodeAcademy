@@ -10,13 +10,13 @@ function customShuffle($arr) {
     return $arr;
 };
 $arr = [1,2,3,4,5];
-var_dump(implode(customShuffle($arr)));
+var_dump(customShuffle($arr));
 
 // Sukurkite masyvą $vartotojas su laukais - vardas, pavardė, amžius, paštas.(Užuomina. Asociatyvus masyvas )
 $user = [
     'name'    => 'Jaroslav',
     'surname' => 'Lukasevic',
-    'age'     => '64',
+    'age'     => '65',
     'mail'    => 'jaroslav.lukasevic@gmail.com'
 ];
 
@@ -24,11 +24,11 @@ $user = [
 
 function validateAge($user) {
     if ($user['age'] >= '18' && $user['age'] < '65') {
-		return sprintf($user['name']. ' yra pilnametis');
+		return $user['name']. ' yra pilnametis';
 	} else if ($user['age'] < '18') {
-		return sprintf($user['name']. ' yra nepilnametis');
+		return $user['name']. ' yra nepilnametis';
 	} else {
-		return sprintf($user['name']. ' yra pensininkas');
+		return $user['name']. ' yra pensininkas';
 	}
 };
 var_dump(validateAge($user));
