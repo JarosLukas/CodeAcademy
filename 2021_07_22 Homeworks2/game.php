@@ -40,16 +40,18 @@ function rollDice()
         $sum = $dice1roll + $dice2roll;
 
         if ($sum > 5 && $dice1roll === $dice2roll && $dice1roll !== 6 && $dice2roll !==6) {
-            return 'Jūs laimėjote BILIETĄ Į KINĄ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+            echo 'Jūs laimėjote BILIETĄ Į KINĄ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
         }
-        if ($dice1roll === 6 && $dice2roll === 6) {
-            return 'Laimėjote DVIRATĮ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+        elseif ($dice1roll === 6 && $dice2roll === 6) {
+            echo 'Laimėjote DVIRATĮ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
         }
-        if ($sum > 5 && $sum <= 11) {
-            return 'Bandykite dar kartą! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+        elseif ($sum > 5 && $sum <= 11) {
+            echo 'Bandykite dar kartą! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+
+            return rollDice();
         }
-        if ($sum <= 5) {
-            return 'PRALAIMĖJOTE! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+        else {
+            echo 'PRALAIMĖJOTE! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
         }
 }
-echo rollDice();
+rollDice();
