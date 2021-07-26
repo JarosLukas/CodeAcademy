@@ -52,4 +52,4 @@ function rollDice()
             return 'PRALAIMĖJOTE! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
         }
 }
-var_dump(rollDice());
+echo rollDice();
