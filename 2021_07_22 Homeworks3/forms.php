@@ -24,10 +24,8 @@
 
 <?php
 if (isset($_GET['number1']) && isset($_GET['number2'])) {
-    $number1 = $_GET['number1'];
-    $number2 = $_GET['number2'];
-    $result = $number1 * $number2;
-    echo "$number1 x $number2 = <strong>$result</strong>";
+    $result = $_GET['number1'] * $_GET['number2'];
+    echo $_GET['number1'], ' x ' .$_GET['number2'] . ' = ' .$result;
     echo '<br><br>';
 }
 ?>
