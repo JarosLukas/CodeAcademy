@@ -1,6 +1,6 @@
 <?php
 // Išvesti į ekraną 10 kartų žodį 'Labas';
-echo str_repeat('Labas ', 10), '<br>';
+echo str_repeat('Labas ', 10);
 echo '<hr>';
 
 // Išvesti į ekraną skaičius nuo 1 iki 10;
@@ -34,11 +34,18 @@ var_dump(array_product($arr));
 echo '<hr>';
 	
 // Išvesti į ekraną kas antrą masyvo elementą;
-foreach (range(1, count($arr), 2) as $key) {
-  unset($arr[$key]);
+$range = range(1, count($arr), 2);
+
+foreach ($range as $key) {
+    var_dump($arr[$key]);
 }
-$arr = array_merge($arr);
-var_dump($arr);
+
+// foreach (range(1, count($arr), 2) as $key) {  // <== nelogiska pasak mokytojo
+//   unset($arr[$key]);
+// }
+// $arr = array_merge($arr);
+// var_dump($arr);
+
 echo '<hr>';
 
 // Funkciją, kuri apverstų masyvo elementus;
@@ -58,13 +65,19 @@ function fibonacci($n, $first = 0, $second = 1)
     }
     return $fib;
 }
-var_dump(fibonacci(10));
+
+function getFib($n)
+{
+    return round(pow((sqrt(5)+1)/2, $n) / sqrt(5));
+}
+
+var_dump(fibonacci(10), getFib(10));
 echo '<hr>';
 
 // Išvesti visų masyvo elementų vidurkį;(foreach)
 
-foreach ($arr as $key => $value) {
-    $average = array_sum($arr)/count($arr);
+foreach ($arr as $key) {
+    $average = array_sum($arr)/count($arr);  // du kart iskviesta skaiciuokle - neteisinga
 }
 var_dump($average);
 echo '<hr>';
@@ -76,4 +89,26 @@ $cars = array
     array('Audi', 'BMW', 'VW'),
     array('Toyota', 'Honda', 'Nissan')
 );
-var_dump($cars);
+
+
+$carsV2 = [
+    [
+        'Volvo',
+        'Saab',
+        'Koenigsegg'
+    ],
+    [
+        'Audi',
+        'BMW',
+        'VW'
+    ],
+    [
+        'Toyota', 'Honda', 'Nissan'
+    ],
+    [
+        'Toyota',
+        'Honda',
+        'Nissan'
+    ]
+    ];
+var_dump($cars, $carsV2);
