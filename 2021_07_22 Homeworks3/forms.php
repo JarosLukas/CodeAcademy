@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -34,13 +35,15 @@ if (isset($_GET['number1']) && isset($_GET['number2'])) {
 // Sukurkite POST registracios formą su pakartotiniu slaptažodžiu ir BŪTINAIS duomenimis.
 // Registracijos duomenis išsiųskite į kitą registracija.php failą ir juos atvaizduokite.
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Registration Form</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
     <h2>Registration Form</h2>
 
     <form action="registration_form.php" method="POST">
