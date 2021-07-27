@@ -37,21 +37,20 @@ function rollDice()
 {
         $dice1roll = rand(1, 6);
         $dice2roll = rand(1, 6);
+        
         $sum = $dice1roll + $dice2roll;
 
-        if ($sum > 5 && $dice1roll === $dice2roll && $dice1roll !== 6 && $dice2roll !==6) {
-            echo 'Jūs laimėjote BILIETĄ Į KINĄ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
-        }
-        elseif ($dice1roll === 6 && $dice2roll === 6) {
-            echo 'Laimėjote DVIRATĮ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
-        }
-        elseif ($sum > 5 && $sum <= 11) {
-            echo 'Bandykite dar kartą! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+        if ($dice1roll === 6 && $dice2roll === 6) {
+            echo 'Laimėjote DVIRATĮ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll . "\n";
+        } else if ($sum > 5 && $dice1roll === $dice2roll && $dice1roll !== 6 && $dice2roll !==6) {
+            echo 'Jūs laimėjote BILIETĄ Į KINĄ! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll . "\n";
+        } else if ($sum > 5 && $sum <= 11) {
+            echo 'Bandykite dar kartą! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll . "\n";
 
             return rollDice();
-        }
-        else {
-            echo 'PRALAIMĖJOTE! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll;
+        } else {
+            echo  'PRALAIMĖJOTE! Išriedėjo ' .$dice1roll .' ir ' .$dice2roll . "\n";
         }
 }
+
 rollDice();
