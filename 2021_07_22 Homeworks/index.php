@@ -76,11 +76,25 @@ echo '<hr>';
 
 // Išvesti visų masyvo elementų vidurkį;(foreach)
 
-foreach ($arr as $key) {
-    $average = array_sum($arr)/count($arr);  // du kart iskviesta skaiciuokle - neteisinga
+// foreach ($arr as $key) {
+//     $average = array_sum($arr)/count($arr);  // du kart iskviesta skaiciuokle - neteisinga
+// }
+// var_dump($average);
+// echo '<hr>';
+
+$sum   = 0;
+$count = 0;
+
+foreach ($arr as $value) {
+    $sum += $value;
+    $count++;
 }
-var_dump($average);
-echo '<hr>';
+
+$averageV1 = $sum / $count;
+
+$averageV2 = array_sum($arr) / count($arr);
+
+var_dump($averageV1, $averageV2);
 	
 // Išvesti automobilis masyvą į ekraną; (dvilypis masyvas);
 $cars = array
