@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form method="GET">
         <label for="number">Pirmas skaičius:</label>
         <br>
         <input type="number" name="number1" placeholder="Įrašykite skaičių"/>
@@ -23,11 +23,16 @@
 </html>
 
 <?php
-if (isset($_GET['number1']) && isset($_GET['number2'])) {
-    $result = $_GET['number1'] * $_GET['number2'];
-    echo $_GET['number1'], ' x ' .$_GET['number2'] . ' = ' .$result;
-    echo '<br><br>';
+if (isset($_GET['number1'], $_GET['number2'])) {
+	if (is_numeric($_GET['number1']) && is_numeric($_GET['number2'])) {
+		echo $_GET['number1'] * $_GET['number2'], '<br>';
+	} else {
+		http_response_code(400);
+	}
+} else {
+	http_response_code(400);
 }
+
 ?>
 
 // Sukurkite POST registracios formą su pakartotiniu slaptažodžiu ir BŪTINAIS duomenimis.
