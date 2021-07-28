@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-  <form class="row g-3" action="" method="$_GET">
+  <form class="row g-3" method="GET">
     <div class="col-auto">
       <input type="text" readonly class="form-control-plaintext" value="Enter temperature ==>">
     </div>
