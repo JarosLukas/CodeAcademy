@@ -3,7 +3,7 @@
 session_save_path(dirname(__FILE__)).'uploads';
 session_start();
 
-require 'index.html';
+require 'index.php';
 
 //https://www.w3schools.com/php/php_file_upload.asp
 
@@ -45,6 +45,7 @@ if(isset($_POST['submit'])) {
   else {
     if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)) {
       echo '<span style="color:green">The file has been uploaded.</span>';
+      $_SESSION['images'][] = $target_dir . '/' . basename($_FILES['fileToUpload']['name']);
     } else {
       echo '<span style="color:red"> Sorry, there was an error uploading your file.</span>';
     }
