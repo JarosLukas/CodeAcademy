@@ -39,7 +39,7 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="<?php echo $_SESSION["images"][0] ?>" alt="image">
+              <img src="<?php echo $_SESSION["images"] ?>" alt="image">
             </div>
             
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
