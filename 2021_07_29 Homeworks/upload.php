@@ -12,18 +12,17 @@ require 'index.phtml';
 // $uploadOk=1 is not used yet (will be used later)
 // $imageFileType holds the file extension of the file (in lower case)
 
+if (isset($_FILES['fileToUpload'])) {
 $target_dir = 'uploads/';
 $target_file = $target_dir . basename($_FILES['fileToUpload']['name']);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-// Check if image file is a actual image or fake image
-if(isset($_POST['submit'])) {
   if (empty($_FILES['fileToUpload']['name'])) {
     echo '<span style="color:red"> Sorry, please choose file and uploaded it.</span>';
     $uploadOk = 0;
   }
-  // elseif (empty($_FILES['description'])) {
+  // if (empty($_FILES['description'])) {
   //   echo '<span style="color:red"> Sorry, please add description.';
   //   $uploadOk = 0;
   // }
