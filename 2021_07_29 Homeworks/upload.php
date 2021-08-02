@@ -3,7 +3,7 @@
 session_save_path(dirname(__FILE__)).'uploads';
 session_start();
 
-require 'index.php';
+require 'index.phtml';
 
 //https://www.w3schools.com/php/php_file_upload.asp
 
