@@ -9,6 +9,6 @@ require_once 'user.php';
 //     'mail'    => 'jaroslav.lukasevic@gmail.com'
 // ];
 
-$user = new User ('Jaroslav','Lukasevic','65','jaroslav.lukasevic@gmail.com');
+$user = new User ('Juozas','Povilaitis','65','Juozas.Povilaitis@gmail.com');
 
 var_dump($user);
